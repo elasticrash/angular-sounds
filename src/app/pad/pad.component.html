@@ -1,0 +1,10 @@
+<div class="pad">
+  <div *ngFor="let block of blocks;let i = index" class="block">
+    <div class="single-block" 
+    [ngStyle]="{'background-color': block.color}" (click)="changeState(i);">
+      {{ block.note.name }}
+    </div>
+  </div>
+</div>
+
+<button class="btn" (click)="play()">start</button>
